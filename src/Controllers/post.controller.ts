@@ -33,6 +33,18 @@ class postController {
       next(error);
     }
   };
+
+  //get a single post
+  getSinglePost = async (req: Request, res: Response, next: NextFunction) => {
+    const { id } = req.params;
+    try {
+      const post = await this.postService.getSinglePost(id);
+
+      res.status(200).json({ data: post, message: "Post retrieved successfully" });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export const PostController = new postController();
