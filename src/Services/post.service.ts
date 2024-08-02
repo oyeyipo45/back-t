@@ -40,10 +40,15 @@ export class PostService {
   }
 
   // update post
-  async updatePost(id: string, data: any) {
+  async updatePost(id: string, data: IPosts) {
+    
+    const updatedData = {
+      isCompleted: !data.isCompleted,
+      title : data.title
+    };
     try {
       // Passing { new:true }, to retuen updated post
-      const post = await PostModel.findByIdAndUpdate({ _id: id }, data, { new: true });
+      const post = await PostModel.findByIdAndUpdate({ _id: id }, updatedData, { new: true });
       if (!post) {
         return "Post not found";
       }
