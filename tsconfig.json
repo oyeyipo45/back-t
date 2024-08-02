@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "declaration": true,
+     "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",           
+     "outDir": "./dist",
+      "sourceMap": true,   
+     "baseUrl" : "./",                        
+    "esModuleInterop": true,                         
+    "forceConsistentCasingInFileNames": true,  
+    "strict": true,  
+    "paths": {
+      "@Common/*": ["src/Common/*"],
+      "@Controllers/*": ["src/Controllers/*"],
+      "@Config/*": ["src/Config/*"],
+      "@Services/*": ["src/Services/*"],
+      "@Models/*": ["src/Models/*"],
+      "@Routes/*": ["src/Routes/*"],
+      "@Server/*": ["src/server/*"],
+      "@Dto/*": ["src/Dto/*"],
+      "@Utils/*": ["src/Utils/*"],
+      "@Exceptions/*": ["src/Exceptions/*"],
+      "@Middleware/*": ["src/Middleware/*"],
+      "@/*": ["src/*"],
+    }                                   
+  }
+}
