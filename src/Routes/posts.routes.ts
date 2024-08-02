@@ -6,3 +6,6 @@ export const router = express.Router()
 
 //add post route
 router.post("/", PostController.createPost);
+
+//get posts
+router.get('/', PostController.getPosts)
