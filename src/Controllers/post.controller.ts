@@ -45,6 +45,13 @@ class postController {
       next(error);
     }
   };
+
+  // update post
+  updatePost = async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const post = await this.postService.updatePost(id, req.body);
+    res.send(post);
+  };
 }
 
 export const PostController = new postController();

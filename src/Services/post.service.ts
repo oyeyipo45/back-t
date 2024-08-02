@@ -38,4 +38,18 @@ export class PostService {
       console.log(error);
     }
   }
+
+  // update post
+  async updatePost(id: string, data: any) {
+    try {
+      // Passing { new:true }, to retuen updated post
+      const post = await PostModel.findByIdAndUpdate({ _id: id }, data, { new: true });
+      if (!post) {
+        return "Post not found";
+      }
+      return post;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
