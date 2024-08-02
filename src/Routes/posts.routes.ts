@@ -9,3 +9,6 @@ router.post("/", PostController.createPost);
 
 //get posts
 router.get('/', PostController.getPosts)
+
+//get single post
+router.get('/:id', PostController.getSinglePost)

@@ -25,4 +25,17 @@ export class PostService {
       console.log(error);
     }
   }
+
+  //get a single post
+  async getSinglePost(id: string) {
+    try {
+      const post = await PostModel.findById({ _id: id });
+      if (!post) {
+        return "Post not found";
+      }
+      return post;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
