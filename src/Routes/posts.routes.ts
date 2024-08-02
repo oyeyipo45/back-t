@@ -12,3 +12,6 @@ router.get('/', PostController.getPosts)
 
 //get single post
 router.get('/:id', PostController.getSinglePost)
+
+//update a post
+router.put('/:id', PostController.updatePost)
